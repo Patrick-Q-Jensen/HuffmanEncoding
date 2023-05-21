@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HuffmanEncoding": {
+      "commandName": "Project",
+      "commandLineArgs": "-i \"C:\\Users\\patri\\Documents\\HuffmanEncoding\\Les Miserables.txt\" -o TestEncoding.txt"
+    }
+  }
+}
