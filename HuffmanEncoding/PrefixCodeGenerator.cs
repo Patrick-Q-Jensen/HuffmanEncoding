@@ -2,18 +2,18 @@
 
 public static class PrefixCodeGenerator
 {
-    public static List<CharacterCode> GenerateCharacterPrefixCodes(Tree t)
-    {
-        List<CharacterCode> code = new();
-        Traverse(new List<byte>(), t.Root, code);
-        return code;
+    public static Dictionary<char, byte[]> GenerateCharacterPrefixCodes(Tree t)
+    {       
+        Dictionary<char, byte[]> characterCodes = new();
+        Traverse(new List<byte>(), t.Root, characterCodes);
+        return characterCodes;
     }
 
-    private static void Traverse(List<byte> code, INode node, List<CharacterCode> characterCodes)
+    private static void Traverse(List<byte> code, INode node, Dictionary<char, byte[]> characterCodes)
     {
         if (node.IsLeaf())
-        {
-            characterCodes.Add(new CharacterCode(((LeafNode)node).Value, node.Weight(), code.ToArray()));                
+        {                           
+            characterCodes.Add(((LeafNode)node).Value, code.ToArray());              
             return;
         }
 

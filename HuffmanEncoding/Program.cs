@@ -16,7 +16,9 @@ internal class Program
 
         Tree tree = TreeConstructor.BuildTree(characterFrequencies);    
 
-        List<CharacterCode> characterCodes = PrefixCodeGenerator.GenerateCharacterPrefixCodes(tree);
+        Dictionary<char, byte[]> characterCodes = PrefixCodeGenerator.GenerateCharacterPrefixCodes(tree);
+
+
     
     }
 }

@@ -59,12 +59,12 @@ public class TreeBuildingTests
         Assert.AreEqual('U', l2.Value);
         Assert.AreEqual(37, l2.Weight());
          
-        List<CharacterCode> characterCodes = PrefixCodeGenerator.GenerateCharacterPrefixCodes(t);
+        Dictionary<char, byte[]> characterCodes = PrefixCodeGenerator.GenerateCharacterPrefixCodes(t);
         
-        CollectionAssert.AreEqual(new byte[] { 0 }, characterCodes.Where(x=>x.Character == 'E').First().Code);
-        CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 0 }, characterCodes.Where(x=>x.Character == 'C').First().Code);
-        CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 1, 1 }, characterCodes.Where(x=>x.Character == 'M').First().Code);
-        CollectionAssert.AreEqual(new byte[] { 1,1,1,1,0,0 }, characterCodes.Where(x=>x.Character == 'Z').First().Code);
+        CollectionAssert.AreEqual(new byte[] { 0 }, characterCodes['E']);
+        CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 0 }, characterCodes['C']);
+        CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 1, 1 }, characterCodes['M']);
+        CollectionAssert.AreEqual(new byte[] { 1,1,1,1,0,0 }, characterCodes['Z']);
 
     }        
 }
