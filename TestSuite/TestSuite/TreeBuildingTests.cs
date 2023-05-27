@@ -21,9 +21,6 @@ public class TreeBuildingTests
         Assert.AreEqual('A', l1.Value);
         Assert.AreEqual(3, l1.Weight());
 
-        //PrefixCodeGenerator pcg = new();
-        //List<CharacterCode> characterCodes = pcg.GenerateCharacterPrefixCodes(t);
-
     }
 
     [TestMethod]
@@ -65,6 +62,6 @@ public class TreeBuildingTests
         CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 0 }, characterCodes['C']);
         CollectionAssert.AreEqual(new byte[] { 1, 1, 1, 1, 1 }, characterCodes['M']);
         CollectionAssert.AreEqual(new byte[] { 1,1,1,1,0,0 }, characterCodes['Z']);
-
+       
     }        
 }

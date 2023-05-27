@@ -2,7 +2,7 @@
   "profiles": {
     "HuffmanEncoding": {
       "commandName": "Project",
-      "commandLineArgs": "-i \"C:\\Users\\patri\\Documents\\HuffmanEncoding\\Les Miserables.txt\" -o TestEncoding.txt"
+      "commandLineArgs": "-i \"C:\\Users\\patri\\source\\repos\\HuffmanEncoding\\HuffmanEncoding\\bin\\Debug\\net6.0\\TestEncoding.txt\" -o TestDecoding.txt -d"
     }
   }
 }
